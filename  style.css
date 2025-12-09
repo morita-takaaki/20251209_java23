@@ -1,0 +1,134 @@
+/* 全体の背景・中央寄せなど */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #ffffff, #e0ecff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 真ん中のカード */
+.app-container {
+  background: #ffffff;
+  width: 360px;
+  max-width: 90%;
+  padding: 24px 20px 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ボタン全体の並び */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+/* 共通の手ボタンスタイル */
+.hand-btn {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+/* 各手ごとの画像設定 */
+.hand-btn.goo {
+  background-image: url("images/rock.png");
+}
+
+.hand-btn.choki {
+  background-image: url("images/scissors.png");
+}
+
+.hand-btn.pa {
+  background-image: url("images/paper.png");
+}
+
+/* ボタンラベル（下側の帯） */
+.hand-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 4px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
+}
+
+/* ホバーエフェクト */
+.hand-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.05);
+}
+
+/* 押し込みエフェクト */
+.hand-btn:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  filter: brightness(0.95);
+}
+
+/* 結果表示カード */
+.result-card {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #f4f7ff;
+  border-radius: 12px;
+}
+
+.result-line {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.result-main {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 成績表示カード */
+.stats-card {
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: #fffaf0;
+  font-size: 14px;
+  color: #444;
+  border-radius: 12px;
+  border: 1px solid #ffe0a6;
+}

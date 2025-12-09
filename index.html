@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ジャンケンゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>ジャンケンゲーム</h1>
+    <p class="subtitle">好きな手を選んでボタンを押してね</p>
+
+    <div class="buttons">
+      <button class="hand-btn goo" data-hand="0">
+        <span class="hand-label">グー</span>
+      </button>
+      <button class="hand-btn choki" data-hand="1">
+        <span class="hand-label">チョキ</span>
+      </button>
+      <button class="hand-btn pa" data-hand="2">
+        <span class="hand-label">パー</span>
+      </button>
+    </div>
+
+    <div class="result-card">
+      <p id="user-hand" class="result-line">あなたの手：-</p>
+      <p id="cpu-hand" class="result-line">コンピュータの手：-</p>
+      <p id="result" class="result-main">結果：-</p>
+    </div>
+
+    <div class="stats-card">
+      <p id="stats-text">勝ち：0回　負け：0回　引き分け：0回</p>
+    </div>
+  </div>
+
+  <!-- JavaScript を読み込む -->
+  <script src="script.js"></script>
+</body>
+</html>
